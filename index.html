@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body onload="startQuiz()" class="bg-light">
+        <div class="container">
+            <div class="card text-center shadow-sm">
+                <div class="card-header bg-primary text-white">
+                    <h1>Quiz App</h1>
+                </div>
+                <div class="card-body">
+                    <h2 id="timer" class="mb-4 text-secondary">2:00</h2>
+                    <p id="ques" class="lead"></p>
+                    <br>
+                    <div class="list-group text-left">
+                        <label class="list-group-item list-group-item-action">
+                            <input
+                                value="1"
+                                onclick="clicked()"
+                                name="options"
+                                type="radio"
+                            >
+                            <span id="opt1"></span>
+                        </label>
+                        <label class="list-group-item list-group-item-action">
+                            <input
+                                value="2"
+                                onclick="clicked()"
+                                name="options"
+                                type="radio"
+                            >
+                            <span id="opt2"></span>
+                        </label>
+                        <label class="list-group-item list-group-item-action">
+                            <input
+                                value="3"
+                                onclick="clicked()"
+                                name="options"
+                                type="radio"
+                            >
+                            <span id="opt3"></span>
+                        </label>
+                    </div>
+                    <br>
+                    <button id="btn" disabled onclick="nextQuestion()" class="btn btn-success btn-lg mt-3">Next</button>
+                </div>
+            </div>
+        </div>
+        
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-app.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-database.js"></script>
+        <script src="firebase-config.js"></script>
+        <script src="app.js"></script>
+    </body>
+</html>

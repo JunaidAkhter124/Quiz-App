@@ -41,7 +41,7 @@ setInterval(function () {
       nextQuestion();
     }
   }
-}, 100);
+}, 1000);
 
 function nextQuestion() {
   min = 1;
